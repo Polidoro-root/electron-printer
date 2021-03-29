@@ -1,3 +1,4 @@
+
 const { app, BrowserWindow, webContents } = require('electron')
 const path = require('path')
 
@@ -12,6 +13,8 @@ function createWindow() {
 
 	window.loadFile('index.html')
 	console.log(window.webContents.getPrinters())
+
+	window.webContents.print()
 }
 
 app.whenReady().then(() => {
